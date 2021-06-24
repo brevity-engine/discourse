@@ -1220,21 +1220,21 @@ export default Controller.extend(bufferedProperty("model"), {
   },
 
   _addOrUpdateBookmarkedPost(postId, reminderAt) {
-    let bookmarkedPost;
-    if (this.model.bookmarked_posts) {
-      bookmarkedPost = this.model.bookmarked_posts.findBy("post_id", postId);
+    if (!this.model.bookmarked_posts) {
+      this.model.set("bookmarked_posts", []);
     }
 
-    if (!bookmarkedPost) {
-      bookmarkedPost = { post_id: postId };
-      if (!this.model.bookmarked_posts) {
-        this.model.set("bookmarked_posts", []);
-      }
-
-      this.model.bookmarked_posts.push(bookmarkedPost);
+    let bookmarkedPost = this.model.bookmarked_posts.findBy("post_id", postId);
+    if (bookmarkedPost) {
+      bookmarkedPost.set("reminder_at", reminderAt);
+      return;
     }
 
-    bookmarkedPost.reminder_at = reminderAt;
+    bookmarkedPost = EmberObject.create({
+      post_id: postId,
+      reminder_at: reminderAt,
+    });
+    this.model.bookmarked_posts.pushObject(bookmarkedPost);
   },
 
   _toggleTopicBookmark() {
