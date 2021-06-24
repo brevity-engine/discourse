@@ -1209,8 +1209,9 @@ export default Controller.extend(bufferedProperty("model"), {
           resolve({ closedWithoutSaving: false });
         },
         afterDelete: (topicBookmarked) => {
-          this.model.bookmarked_posts = this.model.bookmarked_posts.filter(
-            (x) => x.post_id !== post.Id
+          this.model.set(
+            "bookmarked_posts",
+            this.model.bookmarked_posts.filter((x) => x.post_id !== post.Id)
           );
           post.deleteBookmark(topicBookmarked);
         },
@@ -1261,7 +1262,7 @@ export default Controller.extend(bufferedProperty("model"), {
         return bookmarkPost(firstPost);
       } else if (bookmarkedPostsCount === 1) {
         const postId = this.model.bookmarked_posts[0].post_id;
-        const post = this.model.postById(postId);
+        const post = await this.model.postById(postId);
         return bookmarkPost(post);
       } else {
         return this.model
