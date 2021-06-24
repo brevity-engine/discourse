@@ -391,7 +391,7 @@ const Topic = RestModel.extend({
     return this.postStream.loadPost(id);
   },
 
-  deleteBookmark() {
+  deleteBookmarks() {
     return ajax(`/t/${this.id}/remove_bookmarks`, { type: "PUT" });
   },
 

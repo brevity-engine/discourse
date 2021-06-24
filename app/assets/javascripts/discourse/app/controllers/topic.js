@@ -1241,7 +1241,7 @@ export default Controller.extend(bufferedProperty("model"), {
         return bookmarkPost(post);
       } else {
         return this.model
-          .deleteBookmark()
+          .deleteBookmarks()
           .then(() => {
             this.model.toggleProperty("bookmarked");
             this.model.set("bookmark_reminder_at", null);
