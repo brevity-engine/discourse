@@ -395,6 +395,20 @@ const Topic = RestModel.extend({
     return ajax(`/t/${this.id}/remove_bookmarks`, { type: "PUT" });
   },
 
+  clearBookmarks() {
+    this.toggleProperty("bookmarked");
+    this.set("bookmark_reminder_at", null); // fixme remove
+
+    const postIds = this.bookmarkedPosts.mapBy("post_id");
+    postIds.forEach((postId) => {
+      const loadedPost = this.postStream.findLoadedPost(postId);
+      if (loadedPost) {
+        loadedPost.clearBookmark();
+      }
+    });
+    return postIds;
+  },
+
   createGroupInvite(group) {
     return ajax(`/t/${this.id}/invite-group`, {
       type: "POST",

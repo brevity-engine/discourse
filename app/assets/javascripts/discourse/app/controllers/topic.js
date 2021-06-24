@@ -1242,14 +1242,7 @@ export default Controller.extend(bufferedProperty("model"), {
       } else {
         return this.model
           .deleteBookmarks()
-          .then(() => {
-            this.model.toggleProperty("bookmarked");
-            this.model.set("bookmark_reminder_at", null);
-            alreadyBookmarkedPosts.forEach((post) => {
-              post.clearBookmark();
-            });
-            return alreadyBookmarkedPosts.mapBy("id");
-          })
+          .then(this.model.clearBookmarks) // fixme check
           .catch(popupAjaxError)
           .finally(() => this.model.set("bookmarking", false));
       }
