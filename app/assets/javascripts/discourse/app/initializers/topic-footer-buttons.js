@@ -66,7 +66,7 @@ export default {
     });
 
     registerTopicFooterButton({
-      dependentKeys: ["topic.bookmarked", "topic.bookmarkedPosts"],
+      dependentKeys: ["topic.bookmarked", "topic.bookmarkedPosts.[]"],
       id: "bookmark",
       icon() {
         if (this.get("topic.bookmark_reminder_at")) {
