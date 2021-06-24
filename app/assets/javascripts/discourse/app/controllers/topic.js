@@ -1221,58 +1221,58 @@ export default Controller.extend(bufferedProperty("model"), {
     this.model.set("bookmarking", true);
     const alreadyBookmarkedPosts = this.model.bookmarkedPosts;
 
-    return this.model.firstPost().then((firstPost) => {
-      const bookmarkPost = async (post) => {
-        const opts = await this._togglePostBookmark(post);
-        this.model.set("bookmarking", false);
-        if (opts.closedWithoutSaving) {
-          return;
-        }
-        this.model.afterPostBookmarked(post);
-        return [post.id];
-      };
+    const bookmarkPost = async (post) => {
+      const opts = await this._togglePostBookmark(post);
+      this.model.set("bookmarking", false);
+      if (opts.closedWithoutSaving) {
+        return;
+      }
+      this.model.afterPostBookmarked(post);
+      return [post.id];
+    };
 
-      const toggleBookmarkOnServer = () => {
-        if (alreadyBookmarkedPosts.length === 0) {
-          return bookmarkPost(firstPost);
-        } else if (alreadyBookmarkedPosts.length === 1) {
-          const post = alreadyBookmarkedPosts[0];
-          return bookmarkPost(post);
-        } else {
-          return this.model
-            .deleteBookmark()
-            .then(() => {
-              this.model.toggleProperty("bookmarked");
-              this.model.set("bookmark_reminder_at", null);
-              alreadyBookmarkedPosts.forEach((post) => {
-                post.clearBookmark();
-              });
-              return alreadyBookmarkedPosts.mapBy("id");
-            })
-            .catch(popupAjaxError)
-            .finally(() => this.model.set("bookmarking", false));
-        }
-      };
+    const toggleBookmarkOnServer = async () => {
+      if (alreadyBookmarkedPosts.length === 0) {
+        const firstPost = await this.model.firstPost();
+        return bookmarkPost(firstPost);
+      } else if (alreadyBookmarkedPosts.length === 1) {
+        const postId = alreadyBookmarkedPosts[0].post_id;
+        const post = this.model.postById(postId);
+        return bookmarkPost(post);
+      } else {
+        return this.model
+          .deleteBookmark()
+          .then(() => {
+            this.model.toggleProperty("bookmarked");
+            this.model.set("bookmark_reminder_at", null);
+            alreadyBookmarkedPosts.forEach((post) => {
+              post.clearBookmark();
+            });
+            return alreadyBookmarkedPosts.mapBy("id");
+          })
+          .catch(popupAjaxError)
+          .finally(() => this.model.set("bookmarking", false));
+      }
+    };
 
-      return new Promise((resolve) => {
-        if (alreadyBookmarkedPosts.length > 1) {
-          bootbox.confirm(
-            I18n.t("bookmarks.confirm_clear"),
-            I18n.t("no_value"),
-            I18n.t("yes_value"),
-            (confirmed) => {
-              if (confirmed) {
-                toggleBookmarkOnServer().then(resolve);
-              } else {
-                this.model.set("bookmarking", false);
-                resolve();
-              }
+    return new Promise((resolve) => {
+      if (alreadyBookmarkedPosts.length > 1) {
+        bootbox.confirm(
+          I18n.t("bookmarks.confirm_clear"),
+          I18n.t("no_value"),
+          I18n.t("yes_value"),
+          (confirmed) => {
+            if (confirmed) {
+              toggleBookmarkOnServer().then(resolve);
+            } else {
+              this.model.set("bookmarking", false);
+              resolve();
             }
-          );
-        } else {
-          toggleBookmarkOnServer().then(resolve);
-        }
-      });
+          }
+        );
+      } else {
+        toggleBookmarkOnServer().then(resolve);
+      }
     });
   },
 
