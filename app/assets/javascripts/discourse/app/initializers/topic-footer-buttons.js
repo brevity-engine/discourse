@@ -66,7 +66,7 @@ export default {
     });
 
     registerTopicFooterButton({
-      dependentKeys: ["topic.bookmarked", "topic.bookmarkedPosts.[]"],
+      dependentKeys: ["topic.bookmarked", "topic.bookmarked_posts.[]"],
       id: "bookmark",
       icon() {
         if (this.get("topic.bookmark_reminder_at")) {
@@ -81,7 +81,10 @@ export default {
       },
       label() {
         if (!this.get("topic.isPrivateMessage") || this.site.mobileView) {
-          const bookmarkedPostsCount = this.get("topic.bookmarkedPosts").length;
+          const bookmarkedPosts = this.get("topic.bookmarked_posts");
+          const bookmarkedPostsCount = bookmarkedPosts
+            ? bookmarkedPosts.length
+            : 0;
 
           if (bookmarkedPostsCount === 0) {
             return "bookmarked.title";

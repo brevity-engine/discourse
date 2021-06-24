@@ -1204,14 +1204,36 @@ export default Controller.extend(bufferedProperty("model"), {
           post.appEvents.trigger("post-stream:refresh", { id: post.id });
         },
         afterSave: (savedData) => {
+          this._addOrUpdateBookmarkedPost(post.id, savedData.reminderAt);
           post.createBookmark(savedData);
           resolve({ closedWithoutSaving: false });
         },
         afterDelete: (topicBookmarked) => {
+          this.model.bookmarked_posts = this.model.bookmarked_posts.filter(
+            (x) => x.post_id !== post.Id
+          );
           post.deleteBookmark(topicBookmarked);
         },
       });
     });
+  },
+
+  _addOrUpdateBookmarkedPost(postId, reminderAt) {
+    let bookmarkedPost;
+    if (this.model.bookmarked_posts) {
+      bookmarkedPost = this.model.bookmarked_posts.findBy("post_id", postId);
+    }
+
+    if (!bookmarkedPost) {
+      bookmarkedPost = { post_id: postId };
+      if (!this.model.bookmarked_posts) {
+        this.model.set("bookmarked_posts", []);
+      }
+
+      this.model.bookmarked_posts.push(bookmarkedPost);
+    }
+
+    bookmarkedPost.reminder_at = reminderAt;
   },
 
   _toggleTopicBookmark() {
@@ -1219,7 +1241,9 @@ export default Controller.extend(bufferedProperty("model"), {
       return Promise.resolve();
     }
     this.model.set("bookmarking", true);
-    const alreadyBookmarkedPosts = this.model.bookmarkedPosts;
+    const bookmarkedPostsCount = this.model.bookmarked_posts
+      ? this.model.bookmarked_posts.length
+      : 0;
 
     const bookmarkPost = async (post) => {
       const opts = await this._togglePostBookmark(post);
@@ -1232,24 +1256,24 @@ export default Controller.extend(bufferedProperty("model"), {
     };
 
     const toggleBookmarkOnServer = async () => {
-      if (alreadyBookmarkedPosts.length === 0) {
+      if (bookmarkedPostsCount === 0) {
         const firstPost = await this.model.firstPost();
         return bookmarkPost(firstPost);
-      } else if (alreadyBookmarkedPosts.length === 1) {
-        const postId = alreadyBookmarkedPosts[0].post_id;
+      } else if (bookmarkedPostsCount === 1) {
+        const postId = this.model.bookmarked_posts[0].post_id;
         const post = this.model.postById(postId);
         return bookmarkPost(post);
       } else {
         return this.model
           .deleteBookmarks()
-          .then(this.model.clearBookmarks) // fixme check
+          .then(() => this.model.clearBookmarks())
           .catch(popupAjaxError)
           .finally(() => this.model.set("bookmarking", false));
       }
     };
 
     return new Promise((resolve) => {
-      if (alreadyBookmarkedPosts.length > 1) {
+      if (bookmarkedPostsCount > 1) {
         bootbox.confirm(
           I18n.t("bookmarks.confirm_clear"),
           I18n.t("no_value"),

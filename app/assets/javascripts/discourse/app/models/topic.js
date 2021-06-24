@@ -394,13 +394,15 @@ const Topic = RestModel.extend({
     this.toggleProperty("bookmarked");
     this.set("bookmark_reminder_at", null); // fixme remove
 
-    const postIds = this.bookmarkedPosts.mapBy("post_id");
+    const postIds = this.bookmarked_posts.mapBy("post_id");
     postIds.forEach((postId) => {
       const loadedPost = this.postStream.findLoadedPost(postId);
       if (loadedPost) {
         loadedPost.clearBookmark();
       }
     });
+    this.set("bookmarked_posts", []);
+
     return postIds;
   },
 
