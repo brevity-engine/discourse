@@ -322,11 +322,6 @@ const Topic = RestModel.extend({
     return Site.currentProp("archetypes").findBy("id", archetype);
   },
 
-  @discourseComputed("bookmarksWereChanged")
-  bookmarkedPosts() {
-    return this.postStream.posts.filterBy("bookmarked", true);
-  },
-
   isPrivateMessage: equal("archetype", "private_message"),
   isBanner: equal("archetype", "banner"),
 
