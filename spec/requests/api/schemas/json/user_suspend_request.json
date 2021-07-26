@@ -17,9 +17,5 @@
       "example": "delete"
     }
   },
-  "required": [
-    "suspend_until",
-    "reason"
-  ]
+  "required": ["suspend_until", "reason"]
 }
-

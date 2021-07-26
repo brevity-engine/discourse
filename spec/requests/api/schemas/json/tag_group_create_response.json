@@ -13,15 +13,11 @@
         },
         "tag_names": {
           "type": "array",
-          "items": [
-
-          ]
+          "items": []
         },
         "parent_tag_name": {
           "type": "array",
-          "items": [
-
-          ]
+          "items": []
         },
         "one_per_topic": {
           "type": "boolean"
@@ -40,7 +36,5 @@
       ]
     }
   },
-  "required": [
-    "tag_group"
-  ]
+  "required": ["tag_group"]
 }

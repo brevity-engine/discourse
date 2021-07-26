@@ -1,6 +1,6 @@
 **Set up Discourse in the cloud in under 30 minutes** with zero knowledge of Rails or Linux shell. One example is [DigitalOcean][do], but these steps will work on any **Docker-compatible** cloud provider or local server.
 
->  🔔 Don't have 30 minutes to set this up? For a flat one-time fee of $150, the community can install Discourse in the cloud for you. [Click here to purchase a self-supported community install](https://www.literatecomputing.com/product/discourse-install/).
+> 🔔 Don't have 30 minutes to set this up? For a flat one-time fee of $150, the community can install Discourse in the cloud for you. [Click here to purchase a self-supported community install](https://www.literatecomputing.com/product/discourse-install/).
 
 ### Create New Cloud Server
 
@@ -66,19 +66,19 @@ Launch the setup tool at
 
 Answer the following questions when prompted:
 
-    Hostname for your Discourse? [discourse.example.com]: 
-    Email address for admin account(s)? [me@example.com,you@example.com]: 
-    SMTP server address? [smtp.example.com]: 
-    SMTP port? [587]: 
-    SMTP user name? [user@example.com]: 
-    SMTP password? [pa$$word]: 
-    Let's Encrypt account email? (ENTER to skip) [me@example.com]: 
+    Hostname for your Discourse? [discourse.example.com]:
+    Email address for admin account(s)? [me@example.com,you@example.com]:
+    SMTP server address? [smtp.example.com]:
+    SMTP port? [587]:
+    SMTP user name? [user@example.com]:
+    SMTP password? [pa$$word]:
+    Let's Encrypt account email? (ENTER to skip) [me@example.com]:
 
 This will generate an `app.yml` configuration file on your behalf, and then kicks off bootstrap. Bootstrapping takes between **2-8 minutes** to set up your Discourse. If you need to change these settings after bootstrapping, you can run `./discourse-setup` again (it will re-use your previous values from the file) or edit `/containers/app.yml` manually with `nano` and then `./launcher rebuild app`, otherwise your changes will not take effect.
 
 ### Start Discourse
 
- Once bootstrapping is complete, your Discourse should be accessible in your web browser via the domain name `discourse.example.com` you entered earlier.
+Once bootstrapping is complete, your Discourse should be accessible in your web browser via the domain name `discourse.example.com` you entered earlier.
 
 <img src="https://www.discourse.org/images/install/17/discourse-congrats.png" width="650">
 
@@ -112,7 +112,7 @@ You will get email reminders as new versions of Discourse are released. Please s
 
 The `launcher` command in the `/var/discourse` folder can be used for various kinds of maintenance:
 
-``` text
+```text
 Usage: launcher COMMAND CONFIG [--skip-prereqs] [--docker-args STRING]
 Commands:
     start:      Start/initialize a container
@@ -134,35 +134,35 @@ Options:
 
 Do you want...
 
-* Users to log in *only* via your pre-existing website's registration system? [Configure Single-Sign-On](https://meta.discourse.org/t/official-single-sign-on-for-discourse/13045).
+- Users to log in _only_ via your pre-existing website's registration system? [Configure Single-Sign-On](https://meta.discourse.org/t/official-single-sign-on-for-discourse/13045).
 
-- Users to log in via [Google](https://meta.discourse.org/t/configuring-google-oauth2-login-for-discourse/15858), [Twitter](https://meta.discourse.org/t/configuring-twitter-login-for-discourse/13395), [GitHub](https://meta.discourse.org/t/configuring-github-login-for-discourse/13745), or  [Facebook](https://meta.discourse.org/t/configuring-facebook-login-for-discourse/13394)?
+* Users to log in via [Google](https://meta.discourse.org/t/configuring-google-oauth2-login-for-discourse/15858), [Twitter](https://meta.discourse.org/t/configuring-twitter-login-for-discourse/13395), [GitHub](https://meta.discourse.org/t/configuring-github-login-for-discourse/13745), or [Facebook](https://meta.discourse.org/t/configuring-facebook-login-for-discourse/13394)?
 
-- Users to post replies via email? [Configure reply via email](https://meta.discourse.org/t/set-up-reply-via-email-support/14003).
+* Users to post replies via email? [Configure reply via email](https://meta.discourse.org/t/set-up-reply-via-email-support/14003).
 
-- Automatic daily backups? [Configure backups](https://meta.discourse.org/t/configure-automatic-backups-for-discourse/14855).
- 
-- Free HTTPS / SSL support? [Configure Let's Encrypt](https://meta.discourse.org/t/setting-up-lets-encrypt-cert-with-discourse-docker/40709). Paid HTTPS / SSL support? [Configure SSL](https://meta.discourse.org/t/allowing-ssl-for-your-discourse-docker-setup/13847).
+* Automatic daily backups? [Configure backups](https://meta.discourse.org/t/configure-automatic-backups-for-discourse/14855).
 
-- Use a plugin [from Discourse](https://github.com/discourse) or a third party? [Configure plugins](https://meta.discourse.org/t/install-a-plugin/19157) 
+* Free HTTPS / SSL support? [Configure Let's Encrypt](https://meta.discourse.org/t/setting-up-lets-encrypt-cert-with-discourse-docker/40709). Paid HTTPS / SSL support? [Configure SSL](https://meta.discourse.org/t/allowing-ssl-for-your-discourse-docker-setup/13847).
 
-- Multiple Discourse sites on the same server? [Configure multisite](https://meta.discourse.org/t/multisite-configuration-with-docker/14084).
+* Use a plugin [from Discourse](https://github.com/discourse) or a third party? [Configure plugins](https://meta.discourse.org/t/install-a-plugin/19157)
 
-- Webhooks when events happen in Discourse? [Configure webhooks](https://meta.discourse.org/t/setting-up-webhooks/49045).
+* Multiple Discourse sites on the same server? [Configure multisite](https://meta.discourse.org/t/multisite-configuration-with-docker/14084).
 
-- A Content Delivery Network to speed up worldwide access? [Configure a CDN](https://meta.discourse.org/t/enable-a-cdn-for-your-discourse/14857). We recommend [Fastly](http://www.fastly.com/).
+* Webhooks when events happen in Discourse? [Configure webhooks](https://meta.discourse.org/t/setting-up-webhooks/49045).
 
-- Import old content from vBulletin, PHPbb, Vanilla, Drupal, BBPress, etc? [See our open source importers](https://github.com/discourse/discourse/tree/master/script/import_scripts).
+* A Content Delivery Network to speed up worldwide access? [Configure a CDN](https://meta.discourse.org/t/enable-a-cdn-for-your-discourse/14857). We recommend [Fastly](http://www.fastly.com/).
 
-- A user friendly [offline page when rebuilding or upgrading?](https://meta.discourse.org/t/adding-an-offline-page-when-rebuilding/45238)
+* Import old content from vBulletin, PHPbb, Vanilla, Drupal, BBPress, etc? [See our open source importers](https://github.com/discourse/discourse/tree/master/script/import_scripts).
 
-- To embed Discourse [in your WordPress install](https://github.com/discourse/wp-discourse), or [on your static HTML site](https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963)?
+* A user friendly [offline page when rebuilding or upgrading?](https://meta.discourse.org/t/adding-an-offline-page-when-rebuilding/45238)
+
+* To embed Discourse [in your WordPress install](https://github.com/discourse/wp-discourse), or [on your static HTML site](https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963)?
 
 Help us improve this guide! Feel free to ask about it on [meta.discourse.org][meta], or even better, submit a pull request.
 
-   [dd]: https://github.com/discourse/discourse_docker
-  [ssh]: https://help.github.com/articles/generating-ssh-keys
- [meta]: https://meta.discourse.org
-   [do]: https://www.digitalocean.com/?refcode=5fa48ac82415
-  [put]: http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html
-  [mailconfig]: https://github.com/discourse/discourse/blob/master/docs/INSTALL-email.md
+[dd]: https://github.com/discourse/discourse_docker
+[ssh]: https://help.github.com/articles/generating-ssh-keys
+[meta]: https://meta.discourse.org
+[do]: https://www.digitalocean.com/?refcode=5fa48ac82415
+[put]: http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html
+[mailconfig]: https://github.com/discourse/discourse/blob/master/docs/INSTALL-email.md

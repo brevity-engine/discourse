@@ -2,13 +2,13 @@
 
 # The Core Discourse Team
 
-* [Jeff Atwood](//github.com/coding-horror) - Co-Founder, PM
-* [Robin Ward](//github.com/eviltrout) - Co-Founder, Developer
-* [Sam Saffron](//github.com/samsaffron) - Co-Founder, Developer
-* [Neil Lalonde](//github.com/nlalonde) - Developer
+- [Jeff Atwood](//github.com/coding-horror) - Co-Founder, PM
+- [Robin Ward](//github.com/eviltrout) - Co-Founder, Developer
+- [Sam Saffron](//github.com/samsaffron) - Co-Founder, Developer
+- [Neil Lalonde](//github.com/nlalonde) - Developer
 
 ### Special Thanks To
 
-* Nick Sahler - Intern
-* Ryan Mudryk - CSS and HTML design implementation
-* Don Petersen - Developer, installation scripts
+- Nick Sahler - Intern
+- Ryan Mudryk - CSS and HTML design implementation
+- Don Petersen - Developer, installation scripts

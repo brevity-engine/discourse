@@ -510,9 +510,10 @@ export default Component.extend({
           return false;
         }
 
-        const matches = /(?:^|[\s.\?,@\/#!%&*;:\[\]{}=\-_()])(:(?!:).?[\w-]*:?(?!:)(?:t\d?)?:?) ?$/gi.exec(
-          text.substring(0, cp)
-        );
+        const matches =
+          /(?:^|[\s.\?,@\/#!%&*;:\[\]{}=\-_()])(:(?!:).?[\w-]*:?(?!:)(?:t\d?)?:?) ?$/gi.exec(
+            text.substring(0, cp)
+          );
 
         if (matches && matches[1]) {
           return [matches[1]];
@@ -642,9 +643,10 @@ export default Component.extend({
     const post = value.slice(end);
 
     if (opts && opts.lineVal) {
-      const lineVal = value.split("\n")[
-        value.substr(0, textarea.selectionStart).split("\n").length - 1
-      ];
+      const lineVal =
+        value.split("\n")[
+          value.substr(0, textarea.selectionStart).split("\n").length - 1
+        ];
       return { start, end, value: selVal, pre, post, lineVal };
     } else {
       return { start, end, value: selVal, pre, post };

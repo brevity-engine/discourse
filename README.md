@@ -2,8 +2,6 @@
 "https://user-images.githubusercontent.com/1681963/52239617-e2683480-289c-11e9-922b-5da55472e5b4.png"
  width="300px"></a>
 
-
-
 Discourse is the 100% open source discussion platform built for the next decade of the Internet. Use it as a:
 
 - mailing list
@@ -14,12 +12,10 @@ To learn more about the philosophy and goals of the project, [visit **discourse.
 
 ## Screenshots
 
-
 <a href="https://bbs.boingboing.net"><img alt="Boing Boing" src="https://user-images.githubusercontent.com/1681963/52239245-04ad8280-289c-11e9-9c88-8c173d4a0422.png" width="720px"></a>
 <a href="https://twittercommunity.com/"><img src="https://user-images.githubusercontent.com/1681963/52239250-04ad8280-289c-11e9-9e42-574f6eaab9d7.png" width="720px"></a>
 <a href="https://discuss.atom.io/"><img src="https://user-images.githubusercontent.com/1681963/89088039-6735f080-d364-11ea-93a6-5629ea8738fe.png" width="720px"></a>
 <a href="https://forums.gearboxsoftware.com/"><img src="https://user-images.githubusercontent.com/1681963/89088042-68ffb400-d364-11ea-93be-161ea04d8b29.png" width="720px"></a>
-
 
 <img src="https://user-images.githubusercontent.com/1681963/52239118-b304f800-289b-11e9-9904-16450680d9ec.jpg" alt="Mobile" width="414">
 
@@ -47,16 +43,16 @@ If you're looking for our remote work solution, see [teams.discourse.com](https:
 
 ## Requirements
 
-Discourse is built for the *next* 10 years of the Internet, so our requirements are high.
+Discourse is built for the _next_ 10 years of the Internet, so our requirements are high.
 
 Discourse supports the **latest, stable releases** of all major browsers and platforms:
 
-| Browsers              | Tablets      | Phones       |
-| --------------------- | ------------ | ------------ |
-| Apple Safari          | iPadOS       | iOS          |
-| Google Chrome         | Android      | Android      |
-| Microsoft Edge        |              |              |
-| Mozilla Firefox       |              |              |
+| Browsers        | Tablets | Phones  |
+| --------------- | ------- | ------- |
+| Apple Safari    | iPadOS  | iOS     |
+| Google Chrome   | Android | Android |
+| Microsoft Edge  |         |         |
+| Mozilla Firefox |         |         |
 
 ## Built With
 
@@ -66,7 +62,7 @@ Discourse supports the **latest, stable releases** of all major browsers and pla
 - [Redis](https://redis.io/) &mdash; We use Redis as a cache and for transient data.
 - [BrowserStack](https://www.browserstack.com/) &mdash; We use BrowserStack to test on real devices and browsers.
 
-Plus *lots* of Ruby Gems, a complete list of which is at [/master/Gemfile](https://github.com/discourse/discourse/blob/master/Gemfile).
+Plus _lots_ of Ruby Gems, a complete list of which is at [/master/Gemfile](https://github.com/discourse/discourse/blob/master/Gemfile).
 
 ## Contributing
 
@@ -82,7 +78,6 @@ Before contributing to Discourse:
 3. Dig into [**CONTRIBUTING.MD**](CONTRIBUTING.md), which covers submitting bugs, requesting new features, preparing your code for a pull request, etc.
 4. Always strive to collaborate [with mutual respect](https://github.com/discourse/discourse/blob/master/docs/code-of-conduct.md).
 5. Not sure what to work on? [**We've got some ideas.**](https://meta.discourse.org/t/so-you-want-to-help-out-with-discourse/3823)
-
 
 We look forward to seeing your pull requests!
 
@@ -102,7 +97,7 @@ Licensed under the GNU General Public License Version 2.0 (or later);
 you may not use this work except in compliance with the License.
 You may obtain a copy of the License in the LICENSE file, or at:
 
-   https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt
+https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,

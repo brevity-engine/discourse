@@ -58,9 +58,9 @@ discourseModule("Integration | Component | bookmark", function (hooks) {
       ];
 
       const options = Array.from(
-        queryAll(
-          "div.control-group div.tap-tile-grid div.tap-tile-title"
-        ).map((_, div) => div.innerText.trim())
+        queryAll("div.control-group div.tap-tile-grid div.tap-tile-title").map(
+          (_, div) => div.innerText.trim()
+        )
       );
 
       assert.deepEqual(options, expected);

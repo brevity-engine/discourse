@@ -30,37 +30,22 @@
           "type": "integer"
         },
         "description": {
-          "type": [
-            "string",
-            "null"
-          ]
+          "type": ["string", "null"]
         },
         "description_text": {
-          "type": [
-            "string",
-            "null"
-          ]
+          "type": ["string", "null"]
         },
         "description_excerpt": {
-          "type": [
-            "string",
-            "null"
-          ]
+          "type": ["string", "null"]
         },
         "topic_url": {
-          "type": [
-            "string",
-            "null"
-          ]
+          "type": ["string", "null"]
         },
         "read_restricted": {
           "type": "boolean"
         },
         "permission": {
-          "type": [
-            "integer",
-            "null"
-          ]
+          "type": ["integer", "null"]
         },
         "notification_level": {
           "type": "integer"
@@ -69,28 +54,16 @@
           "type": "boolean"
         },
         "topic_template": {
-          "type": [
-            "string",
-            "null"
-          ]
+          "type": ["string", "null"]
         },
         "has_children": {
-          "type": [
-            "string",
-            "null"
-          ]
+          "type": ["string", "null"]
         },
         "sort_order": {
-          "type": [
-            "string",
-            "null"
-          ]
+          "type": ["string", "null"]
         },
         "sort_ascending": {
-          "type": [
-            "string",
-            "null"
-          ]
+          "type": ["string", "null"]
         },
         "show_subcategory_list": {
           "type": "boolean"
@@ -99,10 +72,7 @@
           "type": "integer"
         },
         "default_view": {
-          "type": [
-            "string",
-            "null"
-          ]
+          "type": ["string", "null"]
         },
         "subcategory_list_style": {
           "type": "string"
@@ -122,11 +92,8 @@
         "custom_fields": {
           "type": "object",
           "additionalProperties": false,
-          "properties": {
-          },
-          "required": [
-
-          ]
+          "properties": {},
+          "required": []
         },
         "min_tags_from_required_group": {
           "type": "integer"
@@ -141,28 +108,17 @@
           "type": "boolean"
         },
         "required_tag_group_name": {
-          "type": [
-            "string",
-            "null"
-          ]
+          "type": ["string", "null"]
         },
         "read_only_banner": {
-          "type": [
-            "string",
-            "null"
-          ]
+          "type": ["string", "null"]
         },
         "available_groups": {
           "type": "array",
-          "items": [
-
-          ]
+          "items": []
         },
         "auto_close_hours": {
-          "type": [
-            "string",
-            "null"
-          ]
+          "type": ["string", "null"]
         },
         "auto_close_based_on_last_post": {
           "type": "boolean"
@@ -184,18 +140,12 @@
                   "type": "string"
                 }
               },
-              "required": [
-                "permission_type",
-                "group_name"
-              ]
+              "required": ["permission_type", "group_name"]
             }
           ]
         },
         "email_in": {
-          "type": [
-            "string",
-            "null"
-          ]
+          "type": ["string", "null"]
         },
         "email_in_allow_strangers": {
           "type": "boolean"
@@ -210,10 +160,7 @@
           "type": "boolean"
         },
         "cannot_delete_reason": {
-          "type": [
-            "string",
-            "null"
-          ]
+          "type": ["string", "null"]
         },
         "allow_badges": {
           "type": "boolean"
@@ -225,16 +172,10 @@
           "type": "integer"
         },
         "uploaded_logo": {
-          "type": [
-            "string",
-            "null"
-          ]
+          "type": ["string", "null"]
         },
         "uploaded_background": {
-          "type": [
-            "string",
-            "null"
-          ]
+          "type": ["string", "null"]
         }
       },
       "required": [
@@ -289,7 +230,5 @@
       ]
     }
   },
-  "required": [
-    "category"
-  ]
+  "required": ["category"]
 }

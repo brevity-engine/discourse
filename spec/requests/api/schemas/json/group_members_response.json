@@ -15,19 +15,13 @@
               "type": "string"
             },
             "name": {
-              "type": [
-                "string",
-                "null"
-              ]
+              "type": ["string", "null"]
             },
             "avatar_template": {
               "type": "string"
             },
             "title": {
-              "type": [
-                "string",
-                "null"
-              ]
+              "type": ["string", "null"]
             },
             "last_posted_at": {
               "type": "string"
@@ -70,19 +64,13 @@
               "type": "string"
             },
             "name": {
-              "type": [
-                "string",
-                "null"
-              ]
+              "type": ["string", "null"]
             },
             "avatar_template": {
               "type": "string"
             },
             "title": {
-              "type": [
-                "string",
-                "null"
-              ]
+              "type": ["string", "null"]
             },
             "last_posted_at": {
               "type": "string"
@@ -125,16 +113,8 @@
           "type": "integer"
         }
       },
-      "required": [
-        "total",
-        "limit",
-        "offset"
-      ]
+      "required": ["total", "limit", "offset"]
     }
   },
-  "required": [
-    "members",
-    "owners",
-    "meta"
-  ]
+  "required": ["members", "owners", "meta"]
 }

@@ -43,28 +43,16 @@
                   "type": "string"
                 },
                 "name": {
-                  "type": [
-                    "string",
-                    "null"
-                  ]
+                  "type": ["string", "null"]
                 },
                 "avatar_template": {
                   "type": "string"
                 },
                 "title": {
-                  "type": [
-                    "string",
-                    "null"
-                  ]
+                  "type": ["string", "null"]
                 }
               },
-              "required": [
-                "id",
-                "username",
-                "name",
-                "avatar_template",
-                "title"
-              ]
+              "required": ["id", "username", "name", "avatar_template", "title"]
             }
           },
           "required": [
@@ -102,8 +90,5 @@
       ]
     }
   },
-  "required": [
-    "directory_items",
-    "meta"
-  ]
+  "required": ["directory_items", "meta"]
 }

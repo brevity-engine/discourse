@@ -13,7 +13,5 @@
       "example": "f0fcfd"
     }
   },
-  "required": [
-    "name"
-  ]
+  "required": ["name"]
 }

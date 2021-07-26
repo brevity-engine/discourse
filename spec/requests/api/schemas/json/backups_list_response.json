@@ -15,10 +15,6 @@
         "type": "string"
       }
     },
-    "required": [
-      "filename",
-      "size",
-      "last_modified"
-    ]
+    "required": ["filename", "size", "last_modified"]
   }
 }

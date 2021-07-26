@@ -31,9 +31,8 @@ export default Component.extend({
     let userTextFields = document.getElementsByClassName("user-fields")[0];
 
     if (userTextFields) {
-      userTextFields = userTextFields.getElementsByClassName(
-        "ember-text-field"
-      );
+      userTextFields =
+        userTextFields.getElementsByClassName("ember-text-field");
     }
 
     if (userTextFields) {
@@ -72,9 +71,8 @@ export default Component.extend({
     let userTextFields = document.getElementsByClassName("user-fields")[0];
 
     if (userTextFields) {
-      userTextFields = userTextFields.getElementsByClassName(
-        "ember-text-field"
-      );
+      userTextFields =
+        userTextFields.getElementsByClassName("ember-text-field");
     }
 
     if (userTextFields) {

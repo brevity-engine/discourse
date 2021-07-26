@@ -21,20 +21,13 @@
               "type": "string"
             }
           },
-          "required": [
-            "id",
-            "username",
-            "name",
-            "avatar_template"
-          ]
+          "required": ["id", "username", "name", "avatar_template"]
         }
       ]
     },
     "primary_groups": {
       "type": "array",
-      "items": [
-
-      ]
+      "items": []
     },
     "topic_list": {
       "type": "object",
@@ -78,10 +71,7 @@
                   "type": "integer"
                 },
                 "image_url": {
-                  "type": [
-                    "string",
-                    "null"
-                  ]
+                  "type": ["string", "null"]
                 },
                 "created_at": {
                   "type": "string"
@@ -105,10 +95,7 @@
                   "type": "boolean"
                 },
                 "unpinned": {
-                  "type": [
-                    "string",
-                    "null"
-                  ]
+                  "type": ["string", "null"]
                 },
                 "excerpt": {
                   "type": "string"
@@ -123,16 +110,10 @@
                   "type": "boolean"
                 },
                 "bookmarked": {
-                  "type": [
-                    "string",
-                    "null"
-                  ]
+                  "type": ["string", "null"]
                 },
                 "liked": {
-                  "type": [
-                    "string",
-                    "null"
-                  ]
+                  "type": ["string", "null"]
                 },
                 "views": {
                   "type": "integer"
@@ -153,10 +134,7 @@
                   "type": "boolean"
                 },
                 "featured_link": {
-                  "type": [
-                    "string",
-                    "null"
-                  ]
+                  "type": ["string", "null"]
                 },
                 "posters": {
                   "type": "array",
@@ -175,10 +153,7 @@
                           "type": "integer"
                         },
                         "primary_group_id": {
-                          "type": [
-                            "string",
-                            "null"
-                          ]
+                          "type": ["string", "null"]
                         }
                       },
                       "required": [
@@ -227,14 +202,8 @@
           ]
         }
       },
-      "required": [
-        "can_create_topic",
-        "per_page",
-        "topics"
-      ]
+      "required": ["can_create_topic", "per_page", "topics"]
     }
   },
-  "required": [
-    "topic_list"
-  ]
+  "required": ["topic_list"]
 }

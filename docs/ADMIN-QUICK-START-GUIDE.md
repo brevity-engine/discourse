@@ -10,7 +10,7 @@ Exercise your admin superpowers any time via the admin dashboard at
 
 [**/admin**](/admin)
 
-You can also access it via the "hamburger" <kbd>☰</kbd> menu in the upper right: Admin functions are generally marked with the wrench :wrench:  icon, so look for that.
+You can also access it via the "hamburger" <kbd>☰</kbd> menu in the upper right: Admin functions are generally marked with the wrench :wrench: icon, so look for that.
 
 ### Staff
 
@@ -38,13 +38,13 @@ You can also [set up single-sign on](https://meta.discourse.org/t/official-singl
 
 ### Test Your Email
 
-Email is required for new account signups and notifications. **Test your email to make sure it is configured correctly!**  Visit [the admin email settings](/admin/email), then enter an email address in the "email address to test" field and click <kbd>send test email</kbd>.
+Email is required for new account signups and notifications. **Test your email to make sure it is configured correctly!** Visit [the admin email settings](/admin/email), then enter an email address in the "email address to test" field and click <kbd>send test email</kbd>.
 
 - You got the test email? Great! **Read that email closely**, it has important email deliverability tips.
 - You didn't get the test email? This means your users probably aren't getting any signup or notification emails either.
 - Email deliverability can be hard. Read [**Email Service Configuration**](https://github.com/discourse/discourse/blob/master/docs/INSTALL-email.md).
 
-If you'd like to enable *replying* to topics via email, [see this howto](https://meta.discourse.org/t/set-up-reply-via-email-support/14003).
+If you'd like to enable _replying_ to topics via email, [see this howto](https://meta.discourse.org/t/set-up-reply-via-email-support/14003).
 
 ### Categories
 
@@ -122,22 +122,22 @@ The invite area on your profile page also includes advanced Staff methods of [se
 - You should get an email notification when new versions of Discourse are released. To update your instance via our easy one click upgrade process, visit [/admin/upgrade](/admin/upgrade).
 
 - Some other things you might eventually want to set up:
-   - [Automatic daily backups](https://meta.discourse.org/t/configure-automatic-backups-for-discourse/14855)
-   - [HTTPS support](https://meta.discourse.org/t/allowing-ssl-for-your-discourse-docker-setup/13847)
-   - [Content Delivery Network support](https://meta.discourse.org/t/enable-a-cdn-for-your-discourse/14857)
-   - [Reply via Email](https://meta.discourse.org/t/set-up-reply-via-email-support/14003)
-   - [Import and Export your data](https://meta.discourse.org/t/move-your-discourse-instance-to-a-different-server/15721)
-   - [Change the domain name](https://meta.discourse.org/t/how-do-i-change-the-domain-name/16098)
-   - [Multiple Discourse instances on the same server](https://meta.discourse.org/t/multisite-configuration-with-docker/14084)
-   - [Import old content from vBulletin, PHPbb, Vanilla, Drupal, BBPress, etc](https://github.com/discourse/discourse/tree/master/script/import_scripts)
-   - A firewall on your server? [Configure firewall](https://meta.discourse.org/t/configure-a-firewall-for-discourse/20584).
-   - A user friendly [offline page when rebuilding or upgrading?](https://meta.discourse.org/t/adding-an-offline-page-when-rebuilding/45238)
-   - Embed Discourse [in your WordPress install](https://github.com/discourse/wp-discourse), or [on your static HTML site](https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963)
+  - [Automatic daily backups](https://meta.discourse.org/t/configure-automatic-backups-for-discourse/14855)
+  - [HTTPS support](https://meta.discourse.org/t/allowing-ssl-for-your-discourse-docker-setup/13847)
+  - [Content Delivery Network support](https://meta.discourse.org/t/enable-a-cdn-for-your-discourse/14857)
+  - [Reply via Email](https://meta.discourse.org/t/set-up-reply-via-email-support/14003)
+  - [Import and Export your data](https://meta.discourse.org/t/move-your-discourse-instance-to-a-different-server/15721)
+  - [Change the domain name](https://meta.discourse.org/t/how-do-i-change-the-domain-name/16098)
+  - [Multiple Discourse instances on the same server](https://meta.discourse.org/t/multisite-configuration-with-docker/14084)
+  - [Import old content from vBulletin, PHPbb, Vanilla, Drupal, BBPress, etc](https://github.com/discourse/discourse/tree/master/script/import_scripts)
+  - A firewall on your server? [Configure firewall](https://meta.discourse.org/t/configure-a-firewall-for-discourse/20584).
+  - A user friendly [offline page when rebuilding or upgrading?](https://meta.discourse.org/t/adding-an-offline-page-when-rebuilding/45238)
+  - Embed Discourse [in your WordPress install](https://github.com/discourse/wp-discourse), or [on your static HTML site](https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963)
 
 ### Need more Help?
 
 For more assistance on configuring and running your Discourse forum, see [meta.discourse.org](https://meta.discourse.org).
 
-----
+---
 
 Have suggestions to improve or update this guide? Submit a [pull request](https://github.com/discourse/discourse/blob/master/docs/ADMIN-QUICK-START-GUIDE.md).

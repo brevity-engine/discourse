@@ -1,4 +1,3 @@
-
 To get started, copy the config.ex.yml to config.yml, and then update the properties for your Quandora instance.
 
 ```
@@ -18,4 +17,3 @@ To run tests, include id's for a KB and Question that includes answers and comme
 kb_id: 'some-kb-id'
 question_id: 'some-question-id'
 ```
-

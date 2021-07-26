@@ -24,4 +24,4 @@ There are many other ways to contribute to Discourse besides code. We've outline
 
 For anything else, just start a new topic on [Meta](https://meta.discourse.org/) and let us know what you're interested in working on.
 
-*Thanks for contributing!*
+_Thanks for contributing!_

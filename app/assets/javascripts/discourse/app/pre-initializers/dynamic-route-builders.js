@@ -25,25 +25,20 @@ export default {
     const site = Site.current();
     site.get("filters").forEach((filter) => {
       const filterCapitalized = filter.capitalize();
-      app[
-        `Discovery${filterCapitalized}Controller`
-      ] = DiscoverySortableController.extend();
-      app[
-        `Discovery${filterCapitalized}CategoryController`
-      ] = DiscoverySortableController.extend();
-      app[
-        `Discovery${filterCapitalized}CategoryNoneController`
-      ] = DiscoverySortableController.extend();
+      app[`Discovery${filterCapitalized}Controller`] =
+        DiscoverySortableController.extend();
+      app[`Discovery${filterCapitalized}CategoryController`] =
+        DiscoverySortableController.extend();
+      app[`Discovery${filterCapitalized}CategoryNoneController`] =
+        DiscoverySortableController.extend();
       if (filter !== "top") {
         app[`Discovery${filterCapitalized}Route`] = buildTopicRoute(filter);
       }
 
-      app[`Discovery${filterCapitalized}CategoryRoute`] = buildCategoryRoute(
-        filter
-      );
-      app[
-        `Discovery${filterCapitalized}CategoryNoneRoute`
-      ] = buildCategoryRoute(filter, { no_subcategories: true });
+      app[`Discovery${filterCapitalized}CategoryRoute`] =
+        buildCategoryRoute(filter);
+      app[`Discovery${filterCapitalized}CategoryNoneRoute`] =
+        buildCategoryRoute(filter, { no_subcategories: true });
     });
 
     app.DiscoveryTopRoute = buildTopicRoute("top", {
@@ -58,24 +53,20 @@ export default {
 
     site.get("periods").forEach((period) => {
       const periodCapitalized = period.capitalize();
-      app[
-        `DiscoveryTop${periodCapitalized}Controller`
-      ] = DiscoverySortableController.extend();
-      app[
-        `DiscoveryTop${periodCapitalized}CategoryController`
-      ] = DiscoverySortableController.extend();
-      app[
-        `DiscoveryTop${periodCapitalized}CategoryNoneController`
-      ] = DiscoverySortableController.extend();
+      app[`DiscoveryTop${periodCapitalized}Controller`] =
+        DiscoverySortableController.extend();
+      app[`DiscoveryTop${periodCapitalized}CategoryController`] =
+        DiscoverySortableController.extend();
+      app[`DiscoveryTop${periodCapitalized}CategoryNoneController`] =
+        DiscoverySortableController.extend();
       app[`DiscoveryTop${periodCapitalized}Route`] = buildTopicRoute(
         "top/" + period
       );
       app[`DiscoveryTop${periodCapitalized}CategoryRoute`] = buildCategoryRoute(
         "top/" + period
       );
-      app[
-        `DiscoveryTop${periodCapitalized}CategoryNoneRoute`
-      ] = buildCategoryRoute("top/" + period, { no_subcategories: true });
+      app[`DiscoveryTop${periodCapitalized}CategoryNoneRoute`] =
+        buildCategoryRoute("top/" + period, { no_subcategories: true });
     });
 
     app["TagsShowCategoryRoute"] = TagShowRoute.extend();
@@ -87,12 +78,10 @@ export default {
       app["TagShow" + filter.capitalize() + "Route"] = TagShowRoute.extend({
         navMode: filter,
       });
-      app[
-        "TagsShowCategory" + filter.capitalize() + "Route"
-      ] = TagShowRoute.extend({ navMode: filter });
-      app[
-        "TagsShowNoneCategory" + filter.capitalize() + "Route"
-      ] = TagShowRoute.extend({ navMode: filter, noSubcategories: true });
+      app["TagsShowCategory" + filter.capitalize() + "Route"] =
+        TagShowRoute.extend({ navMode: filter });
+      app["TagsShowNoneCategory" + filter.capitalize() + "Route"] =
+        TagShowRoute.extend({ navMode: filter, noSubcategories: true });
     });
   },
 };

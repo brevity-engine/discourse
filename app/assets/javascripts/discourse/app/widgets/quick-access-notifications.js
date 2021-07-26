@@ -48,9 +48,8 @@ createWidgetFrom(QuickAccessPanel, "quick-access-notifications", {
   },
 
   itemHtml(notification) {
-    const notificationName = this.site.notificationLookup[
-      notification.notification_type
-    ];
+    const notificationName =
+      this.site.notificationLookup[notification.notification_type];
 
     return this.attach(
       `${notificationName.dasherize()}-notification-item`,
