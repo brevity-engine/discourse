@@ -5,7 +5,5 @@
       "type": "boolean"
     }
   },
-  "required": [
-    "with_uploads"
-  ]
+  "required": ["with_uploads"]
 }

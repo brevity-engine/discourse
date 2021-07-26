@@ -991,8 +991,7 @@ eviltrout</p>
       let cache = {};
       cache["upload://o8iobpLcW3WSFvVH7YQmyGlKmGM.pdf"] = {
         short_url: "upload://o8iobpLcW3WSFvVH7YQmyGlKmGM.pdf",
-        url:
-          "/secure-media-uploads/original/3X/c/b/o8iobpLcW3WSFvVH7YQmyGlKmGM.pdf",
+        url: "/secure-media-uploads/original/3X/c/b/o8iobpLcW3WSFvVH7YQmyGlKmGM.pdf",
         short_path: "/uploads/short-url/blah",
       };
       return cache;
@@ -1013,8 +1012,7 @@ eviltrout</p>
       let cache = {};
       cache["upload://o8iobpLcW3WSFvVH7YQmyGlKmGM.pdf"] = {
         short_url: "upload://o8iobpLcW3WSFvVH7YQmyGlKmGM.pdf",
-        url:
-          "/secure-media-uploads/original/3X/c/b/o8iobpLcW3WSFvVH7YQmyGlKmGM.pdf",
+        url: "/secure-media-uploads/original/3X/c/b/o8iobpLcW3WSFvVH7YQmyGlKmGM.pdf",
         short_path: "/uploads/short-url/blah",
       };
       return cache;

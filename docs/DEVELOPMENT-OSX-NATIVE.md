@@ -93,25 +93,33 @@ OS X might ship with Postgres 9.x, but you're better off going with 10 and above
 After installing [Postgres.app](https://postgresapp.com/), there are some additional setup steps that are necessary for discourse to create a database on your machine.
 
 Open this file:
+
 ```
 ~/Library/Application Support/Postgres/var-9.3/postgresql.conf
 ```
+
 And change these two lines so that postgres will create a socket in the folder discourse expects it to:
+
 ```
 unix_socket_directories = '/var/pgsql_socket'   # comma-separated list of directories
 #and
 unix_socket_permissions = 0777  # begin with 0 to use octal notation
 ```
+
 Then create the '/var/pgsql_socket/' folder and set up the appropriate permission in your bash (this requires admin access)
+
 ```
 sudo mkdir /var/pgsql_socket
 sudo chmod 770 /var/pgsql_socket
 sudo chown root:staff /var/pgsql_socket
 ```
+
 Now you can restart Postgres.app and it will use this socket. Make sure you not only restart the app but kill any processes that may be left behind. You can view these processes with this bash command:
+
 ```
 netstat -ln | grep PGSQL
 ```
+
 And you should be good to go!
 
 #### Troubleshooting
@@ -128,10 +136,9 @@ If running `psql -h /var/pgsql_socket` works then you need to configure the host
 
 ```
 export PGHOST="/var/pgsql_socket"
-````
+```
 
 Then make sure to reload your config with: `source ~/.bash_profile`. Now `psql` should work.
-
 
 ### Using Homebrew:
 
@@ -231,21 +238,25 @@ npm install -g svgo
 
 ## Setting up your Discourse
 
-###  Check out the repository
+### Check out the repository
+
 ```sh
 git clone git@github.com:discourse/discourse.git
 cd discourse # Navigate into the repository, and stay there for the rest of this how-to
 ```
+
 ### What about the config files?
 
 If you've stuck to all the defaults above, the default `discourse.conf` and `redis.conf` should work out of the box.
 
 ### Install the needed gems
+
 ```sh
 bundle install
 ```
 
 ### Prepare your database
+
 ```sh
 # run this if there was a pre-existing database
 bundle exec rake db:drop
@@ -258,9 +269,11 @@ RAILS_ENV=test bundle exec rake db:create db:migrate
 ```
 
 ## Now, test it out!
+
 ```sh
 bundle exec rspec
 ```
+
 All specs should pass
 
 ### Deal with any problems which arise.

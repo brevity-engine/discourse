@@ -81,18 +81,23 @@ export default class MediaOptimizationWorkerService extends Service {
             resize_wasm: getURLWithCDN(
               "/javascripts/squoosh/squoosh_resize_bg.wasm"
             ),
-            resize_threshold: this.siteSettings
-              .composer_media_optimization_image_resize_dimensions_threshold,
-            resize_target: this.siteSettings
-              .composer_media_optimization_image_resize_width_target,
-            resize_pre_multiply: this.siteSettings
-              .composer_media_optimization_image_resize_pre_multiply,
-            resize_linear_rgb: this.siteSettings
-              .composer_media_optimization_image_resize_linear_rgb,
-            encode_quality: this.siteSettings
-              .composer_media_optimization_image_encode_quality,
-            debug_mode: this.siteSettings
-              .composer_media_optimization_debug_mode,
+            resize_threshold:
+              this.siteSettings
+                .composer_media_optimization_image_resize_dimensions_threshold,
+            resize_target:
+              this.siteSettings
+                .composer_media_optimization_image_resize_width_target,
+            resize_pre_multiply:
+              this.siteSettings
+                .composer_media_optimization_image_resize_pre_multiply,
+            resize_linear_rgb:
+              this.siteSettings
+                .composer_media_optimization_image_resize_linear_rgb,
+            encode_quality:
+              this.siteSettings
+                .composer_media_optimization_image_encode_quality,
+            debug_mode:
+              this.siteSettings.composer_media_optimization_debug_mode,
           },
         },
         [imageData.data.buffer]

@@ -24,7 +24,5 @@
       "format": "binary"
     }
   },
-  "required": [
-    "type"
-  ]
+  "required": ["type"]
 }

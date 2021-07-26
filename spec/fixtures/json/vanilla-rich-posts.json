@@ -1,7 +1,9 @@
 {
-  "text": [{
-    "insert": "This is a message.\nAnd a second line.\n"
-  }],
+  "text": [
+    {
+      "insert": "This is a message.\nAnd a second line.\n"
+    }
+  ],
   "mention": [
     { "insert": { "mention": { "name": "Gandalf The Grey", "userID": 666 } } },
     {
@@ -13,7 +15,7 @@
       "insert": "We can link to the "
     },
     {
-      "attributes": { "link": "https:\/\/www.discourse.org\/" },
+      "attributes": { "link": "https://www.discourse.org/" },
       "insert": "Discourse home page"
     },
     {
@@ -27,14 +29,14 @@
           "data": {
             "recordID": 12345,
             "recordType": "discussion",
-            "body": "This is the full<br \/>body<br \/>of the quoted discussion.<br \/>",
+            "body": "This is the full<br />body<br />of the quoted discussion.<br />",
             "bodyRaw": "This is the full\r\nbody\r\nof the quoted discussion.\r\n",
             "format": "Html",
             "dateInserted": "2020-04-27T15:32:12+00:00",
             "insertUser": {
               "userID": 34567,
               "name": "Saruman",
-              "photoUrl": "\/\/w1.vanillicon.com\/v2\/117aa212e39e806eed30886df18fe9bc.svg",
+              "photoUrl": "//w1.vanillicon.com/v2/117aa212e39e806eed30886df18fe9bc.svg",
               "dateLastActive": "2020-05-03T01:08:18+00:00"
             },
             "displayOptions": {
@@ -46,13 +48,13 @@
               "renderFullContent": false,
               "expandByDefault": false
             },
-            "url": "https:\/\/vanilla.sampleforum.org\/discussion\/12345\/the-discussion-title",
+            "url": "https://vanilla.sampleforum.org/discussion/12345/the-discussion-title",
             "embedType": "quote",
             "name": "The discussion title"
           },
           "loaderData": {
             "type": "link",
-            "link": "https:\/\/vanilla.sampleforum.org\/discussion\/12345\/the-discussion-title"
+            "link": "https://vanilla.sampleforum.org/discussion/12345/the-discussion-title"
           }
         }
       }
@@ -67,9 +69,9 @@
       "insert": {
         "embed-external": {
           "data": {
-            "url": "https:\/\/vanilla.sampleforum.org\/uploads\/569\/ZSM5T09U03WE.png",
+            "url": "https://vanilla.sampleforum.org/uploads/569/ZSM5T09U03WE.png",
             "name": "Screen Shot 2020-05-26 at 7.09.06 AM.png",
-            "type": "image\/png",
+            "type": "image/png",
             "size": 94050,
             "width": 1214,
             "height": 886,
@@ -97,8 +99,8 @@
         "embed-external": {
           "data": {
             "body": "A preview text of the url fetched by Vanilla Forum.",
-            "photoUrl": "https:\/\/someurl.com\/an_image.jpeg",
-            "url": "https:\/\/someurl.com\/long\/path\/here_and_there\/?fdkmlgm",
+            "photoUrl": "https://someurl.com/an_image.jpeg",
+            "url": "https://someurl.com/long/path/here_and_there/?fdkmlgm",
             "embedType": "link",
             "name": "Title of the page being linked",
             "format": null,
@@ -106,7 +108,7 @@
           },
           "loaderData": {
             "type": "link",
-            "link": "https:\/\/someurl.com\/long\/path\/here_and_there\/?fdkmlgm"
+            "link": "https://someurl.com/long/path/here_and_there/?fdkmlgm"
           }
         }
       }
@@ -121,9 +123,9 @@
       "insert": {
         "embed-external": {
           "data": {
-            "url": "https:\/\/vanilla.sampleforum.org\/uploads\/393\/5QR3BX57K7HM.pdf",
+            "url": "https://vanilla.sampleforum.org/uploads/393/5QR3BX57K7HM.pdf",
             "name": "original_name_of_file.pdf",
-            "type": "application\/pdf",
+            "type": "application/pdf",
             "size": 501287,
             "mediaID": 9,
             "dateInserted": "2020-05-21T17:58:07+00:00",
@@ -149,14 +151,26 @@
   "complex_formatting": [
     { "attributes": { "bold": true }, "insert": "Name" },
     { "insert": ": Jon Snow\n" },
-    { "attributes": { "bold": true, "italic": true }, "insert": "* not their real name" },
+    {
+      "attributes": { "bold": true, "italic": true },
+      "insert": "* not their real name"
+    },
     { "insert": "\n" },
     { "insert": "first item" },
-    { "attributes": { "list": { "depth": 0, "type": "ordered" } }, "insert": "\n" },
+    {
+      "attributes": { "list": { "depth": 0, "type": "ordered" } },
+      "insert": "\n"
+    },
     { "insert": "second" },
-    { "attributes": { "list": { "depth": 0, "type": "ordered" } }, "insert": "\n" },
+    {
+      "attributes": { "list": { "depth": 0, "type": "ordered" } },
+      "insert": "\n"
+    },
     { "insert": "third and last" },
-    { "attributes": { "list": { "depth": 0, "type": "ordered" } }, "insert": "\n" },
+    {
+      "attributes": { "list": { "depth": 0, "type": "ordered" } },
+      "insert": "\n"
+    },
     { "insert": "That's all folks!\n" }
   ],
   "code_block": [

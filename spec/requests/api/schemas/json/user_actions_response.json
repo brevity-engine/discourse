@@ -33,10 +33,7 @@
               "type": "integer"
             },
             "target_name": {
-              "type": [
-                "string",
-                "null"
-              ]
+              "type": ["string", "null"]
             },
             "target_username": {
               "type": "string"
@@ -45,19 +42,13 @@
               "type": "integer"
             },
             "post_id": {
-              "type": [
-                "string",
-                "null"
-              ]
+              "type": ["string", "null"]
             },
             "username": {
               "type": "string"
             },
             "name": {
-              "type": [
-                "string",
-                "null"
-              ]
+              "type": ["string", "null"]
             },
             "user_id": {
               "type": "integer"
@@ -66,10 +57,7 @@
               "type": "string"
             },
             "acting_name": {
-              "type": [
-                "string",
-                "null"
-              ]
+              "type": ["string", "null"]
             },
             "acting_user_id": {
               "type": "integer"
@@ -81,22 +69,13 @@
               "type": "boolean"
             },
             "hidden": {
-              "type": [
-                "string",
-                "null"
-              ]
+              "type": ["string", "null"]
             },
             "post_type": {
-              "type": [
-                "string",
-                "null"
-              ]
+              "type": ["string", "null"]
             },
             "action_code": {
-              "type": [
-                "string",
-                "null"
-              ]
+              "type": ["string", "null"]
             },
             "category_id": {
               "type": "integer"
@@ -140,7 +119,5 @@
       ]
     }
   },
-  "required": [
-    "user_actions"
-  ]
+  "required": ["user_actions"]
 }

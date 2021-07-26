@@ -1,4 +1,3 @@
-
 To get started, copy the config.ex.yml to config.yml, and then update the properties for your Socialcast instance.
 
 This importer uses the [Socialcast API](https://socialcast.github.io/socialcast/apidoc.html).

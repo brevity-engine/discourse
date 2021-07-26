@@ -12,10 +12,7 @@
         "type": "string"
       },
       "name": {
-        "type": [
-          "string",
-          "null"
-        ]
+        "type": ["string", "null"]
       },
       "avatar_template": {
         "type": "string"
@@ -25,9 +22,7 @@
       },
       "secondary_emails": {
         "type": "array",
-        "items": [
-
-        ]
+        "items": []
       },
       "active": {
         "type": "boolean"
@@ -60,19 +55,13 @@
         "type": "integer"
       },
       "manual_locked_trust_level": {
-        "type": [
-          "string",
-          "null"
-        ]
+        "type": ["string", "null"]
       },
       "flag_level": {
         "type": "integer"
       },
       "title": {
-        "type": [
-          "string",
-          "null"
-        ]
+        "type": ["string", "null"]
       },
       "time_read": {
         "type": "integer"

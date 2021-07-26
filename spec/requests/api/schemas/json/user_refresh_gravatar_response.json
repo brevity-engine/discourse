@@ -8,8 +8,5 @@
       "type": ["string", "null"]
     }
   },
-  "required": [
-    "gravatar_upload_id",
-    "gravatar_avatar_template"
-  ]
+  "required": ["gravatar_upload_id", "gravatar_avatar_template"]
 }

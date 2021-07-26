@@ -34,15 +34,14 @@ Go to [My Account page](https://app.mailjet.com/account) and click on the ["SMTP
     SMTP user name?      [Your registered email address]
     SMTP password?       [Elastic Email API Key]
     SMTP port?           2525
-    
+
 NOTE: By default, Elastic Email will add an additional UNSUBSCRIBE link at the bottom of each sent email. You need to work with them to [disable that link](https://meta.discourse.org/t/remove-or-merge-elastic-email-unsubscribe/70236/39), so that Discourse users can manage their subscription through Discourse.
 
-   [ee]: https://elasticemail.com
-  [jet]: https://www.mailjet.com/pricing
-  [gun]: https://www.mailgun.com/
-   [sg]: https://sendgrid.com/
-  [sg2]: https://sendgrid.com/docs/Classroom/Send/How_Emails_Are_Sent/api_keys.html
-  
+[ee]: https://elasticemail.com
+[jet]: https://www.mailjet.com/pricing
+[gun]: https://www.mailgun.com/
+[sg]: https://sendgrid.com/
+[sg2]: https://sendgrid.com/docs/Classroom/Send/How_Emails_Are_Sent/api_keys.html
 
 ### Bounce Handling
 

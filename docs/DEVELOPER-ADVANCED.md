@@ -43,7 +43,6 @@ To get your Ubuntu 16.04 or 18.04 LTS install up and running to develop Discours
     nvm alias default node
     npm install -g svgo
 
-
 If everything goes alright, let's clone Discourse and start hacking:
 
     git clone https://github.com/discourse/discourse.git ~/discourse

@@ -6,7 +6,5 @@
       "example": "OK"
     }
   },
-  "required": [
-    "success"
-  ]
+  "required": ["success"]
 }

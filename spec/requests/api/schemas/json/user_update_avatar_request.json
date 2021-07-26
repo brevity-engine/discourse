@@ -6,16 +6,8 @@
     },
     "type": {
       "type": "string",
-      "enum": [
-        "uploaded",
-        "custom",
-        "gravatar",
-        "system"
-      ]
+      "enum": ["uploaded", "custom", "gravatar", "system"]
     }
   },
-  "required": [
-    "upload_id",
-    "type"
-  ]
+  "required": ["upload_id", "type"]
 }

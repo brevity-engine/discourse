@@ -6,7 +6,5 @@
       "format": "email"
     }
   },
-  "required": [
-    "email"
-  ]
+  "required": ["email"]
 }
